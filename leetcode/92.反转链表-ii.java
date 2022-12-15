@@ -17,24 +17,23 @@
  */
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-
-        ListNode lnode = head;
-        ListNode rnode = head;
-
-        // 更新 左节点
-        for(int i=0; i<left; i++){
-            lnode = lnode.next;
+        if (left  == 1 ){
+            return reverseN(head, right);
         }
+        head.next = reverseBetween(head.next, left -1, right -1);
+        return head;
+
 
     }
-
-    public ListNode reverse(ListNode head) {
-        if (head == null || head.next == null) {
+    public ListNode successor = null; 
+    public ListNode reverseN(ListNode head, int n) {
+        if (n==1) {
+            successor = head.next;
             return head;
         }
-        ListNode last = reverse(head);
+        ListNode last = reverseN(head.next, n-1);
         head.next.next = head;
-        head.next = null;
+        head.next = successor;
         return last;
     }
 }
