@@ -1,1 +1,14 @@
-https://pdai.tech/md/algorithm/alg-core-overview.html
+
+# 1 初级排序
+1. 选择排序
+2. 插入排序
+3. 希尔排序
+
+# 2 归并排序
+
+
+# 3 快速排序
+
+
+# 4 优先队列
+
