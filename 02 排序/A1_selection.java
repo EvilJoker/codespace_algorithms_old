@@ -47,10 +47,9 @@ public class A1_selection {
     }
 
     public static void main(String[] args) {
-        A1_selection sorter = new A1_selection();
         Integer[] A = { 1, 3, 0, 7, 9, 5 };
 
-        sorter.sort(A);
+        sort(A);
 
         assert isSorted(A) : "Not Sorted";
 
